@@ -28,7 +28,7 @@ As opções de flags comuns:
 * -u vai apagar a fonte do arquivo logo depois que a transferência for completada.
 * -c vai habilitar a compressão de dados enquanto a operação de transferência está sendo executada.
 
-<h4 align="center"> Arquivo Local para um Local Remoto </h4>
+<h3 align="center"> Arquivo Local para um Local Remoto </h3>
 
 Se você não tem uma confirmação automática do cliente SSH, você vai ser solicitado para inserir a senha da máquina local do usuário e versá uma métrica de progresso.
 
@@ -49,30 +49,10 @@ Se você quer copiar um diretório que tem mais arquivos e/ou mais subdiretório
     
     scp -r /users/Edward/desktop root@191.162.0.2:/writing/article
 
+<h3 align="center"> Arquivo Remoto para uma Máquina Local </h3>
 
-<h3 align="center">Arquivo Remoto para uma Máquina Local </h3>
+    scp root@191.162.0.2:/writing/articles/SCP.zip Users/Edward/Desktop
 
-Neste processo, a fonte e o alvo do comando ficam reservados. Então, isso deve refletir na sua sintaxe. Desta vez, estamos tentando copiar scp.zip do mesmo host remoto para a nossa máquina local.
+<h3 align="center"> Arquivo Remoto para Outro Local Remoto </h3>
 
-scp root@191.162.0.2:/writing/articles/SCP.zip Users/Edward/Desktop
-Novamente, isso deve pedir um login SSH, onde você precisa colocar sua senha de acesso. A menos que a autenticação tenha sido desabilitada por privilégios sudo. Ou que você forçou o cliente SSH a usar uma chave privada na sua máquina.
-
-Arquivo Remoto para Outro Local Remoto
-Para copiar arquivos de um host remoto para outro, você vai ter que inserir senhas para ambas as contas depois de executar este comando no seu terminal.
-
-Exemplo:
-
-scp root@191.162.0.2:/writing/article/scp.zip edward@11.10.0.1:/publishing
-O comando acima copia a fonte do arquivo /writing/article/scp.zip do primeiro host para o segundo. Para copiar pastas, apenas adicione a opção -r e especifique o caminho da pasta ao invés do arquivo dentro dela, como fizemos antes.
-
-Em circunstâncias normais, o arquivo vai direto do primeiro host remoto para o segundo. Porém, se você quiser redirecionar a operação através da sua máquina, é só adicionar a opção -3:
-
-scp -3 root@191.162.0.2:/writing/article/scp.zip edward@11.10.0.1:/publishing
-E é isso!
-
-Resumo
-Neste artigo, você aprendeu a como transferir arquivos facilmente entre hosts locais e remotos usando um comando SCP. Isso é extremamente útil quando você está trabalhando com múltiplos servidores.
-
-O protocolo da cópia de segurança faz com que seja mais fácil copiar informações com sucesso de um host remoto para outro sem precisar fazer login.
-
-Além disso, esse método de transferência remota de arquivos encripta seus dados com um shell seguro, o que garante a confiabilidade da informação que está sendo transmitida.
+    scp root@191.162.0.2:/writing/article/scp.zip edward@11.10.0.1:/publishing
