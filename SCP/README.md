@@ -40,12 +40,15 @@ root@191.162.0.2’s password:
 novel3.zip   100% 0 0.0KB/s 00:00
 
 Mas, vamos dizer que a máquina remota está configurada para responder às conexões SSH e uma porta que não seja a 22.
+    
     scp -P 2322 /users/Edward/desktop/scp.zip root@191.162.0.2:/writing/article
 
 Se você quiser mudar o nome do arquivo durante a operação da transferência.
+    
     scp /users/Edward/desktop/scp.zip root@191.162.0.2:/writing/article/howtoscp.zip
 
 Se você quer copiar um diretório que tem mais arquivos e/ou mais subdiretórios, use a linha de comando -r.
+    
     scp -r /users/Edward/desktop root@191.162.0.2:/writing/article
 
 
