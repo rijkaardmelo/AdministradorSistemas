@@ -28,9 +28,7 @@ As opções de flags comuns:
 * -u vai apagar a fonte do arquivo logo depois que a transferência for completada.
 * -c vai habilitar a compressão de dados enquanto a operação de transferência está sendo executada.
 
-<h2 align="center"> Arquivo Local para um Local Remoto </h2>
-
-Exemplo:
+<h4 align="center"> Arquivo Local para um Local Remoto </h4>
 
 Se você não tem uma confirmação automática do cliente SSH, você vai ser solicitado para inserir a senha da máquina local do usuário e versá uma métrica de progresso.
 
@@ -52,7 +50,8 @@ Se você quer copiar um diretório que tem mais arquivos e/ou mais subdiretório
     scp -r /users/Edward/desktop root@191.162.0.2:/writing/article
 
 
-Arquivo Remoto para uma Máquina Local
+<h3 align="center">Arquivo Remoto para uma Máquina Local </h3>
+
 Neste processo, a fonte e o alvo do comando ficam reservados. Então, isso deve refletir na sua sintaxe. Desta vez, estamos tentando copiar scp.zip do mesmo host remoto para a nossa máquina local.
 
 scp root@191.162.0.2:/writing/articles/SCP.zip Users/Edward/Desktop
