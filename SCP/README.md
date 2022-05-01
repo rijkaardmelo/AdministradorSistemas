@@ -1,20 +1,8 @@
-O Que é Comando SCP?
-Baseado em Berkeley Software Distribution (BSD) Remote Copy Protocol, o SCP (Secure Copy) é um protocolo de rede para transferências de arquivos.
-
-Com ele, você pode transferir arquivos de forma fácil e segura entre um local remoto e um host ou entre dois locais remotos.
-
-Desenvolvedores full-stack frequentemente usam um comando SCP para funções de autenticação e encriptação sem precisar usar softwares externos, como o Github.
-
-É uma maneira bem acessível de prevenir que seus dados fiquem expostos para outros usuários ao mesmo tempo em que preserva a confidencialidade.
-
-Na essência, o SCP é uma mistura de RCP e SSH (Secure Shell). Ele se baseia no primeiro para realizar ações de cópia. Enquanto que, no segundo, ele usa toda a parte de encriptação de informação para autenticar sistemas remotos.
-
-Diferentemente do Rsync, tudo o que você precisa para usar um comando SCP com sucesso é um nome de usuário e senha. Ou, ainda, uma frase que serve como senha para os sistemas envolvidos na transferência. Ele agiliza o processo, pois você não precisa fazer login em nenhum deles.
-
 Exemplo de Sintaxe de Comandos SCP Linux
-Um comando SCP básico se parece com isso:
+Um comando SCP básico:
 
-scp [other options] [source username@IP]:/[directory and file name] [destination username@IP]:/[destination directory]
+    scp [other options] [source username@IP]:/[directory and file name] [destination username@IP]:/[destination directory]
+
 Pode parecer complicado num primeiro momento. Mas vamos explicar cada trecho dele para você.
 
 Neste exemplo de comando acima, estamos fazendo uma transferência entre dois servidores de VPS.
