@@ -17,23 +17,18 @@ Um comando SCP básico:
 
 * [destination directory] é o diretório onde o arquivo será salvo.
 
-Em um cenário mais claro, a situação se pareceria com algo como:
+As opções de flags:   
 
-scp -p root@162.168.1.1:/media/scp.png edward@162.168.1.2:/desktop/destination
-Viu como é simples? Se você está copiando para ou de uma máquina local, você não precisa do endereço de IP, do destino ou do caminho da fonte como /desktop/nome_da_pasta.  
+* -P possibilita especificar uma entrada diferente para o servidor (a porta padrão para a porta TCP para o comando é a 22).
+* -c dá a possibilidade de especificar a encriptação do algoritmo que o cliente vai usar. Alguns dos valores que você pode usar são ‘aes256-ctr’, ‘aes256-cbc’, ‘blowfish-cbc’, ‘arcfour’, ‘arcfour128’, ‘arcfour256’, ‘cast128-cbc’, aes128-ctr’, ‘aes128-cbc’, ‘aes192-ctr’, ‘aes192-cbc’ e 3des-cbc’. A opção padrão na configuração do shell é ‘AnyStdCipher’
+* -q vai executar a operação em modo silencioso, o que significa que apenas os erros críticos é que serão mostrados.
+* -r é para cópia recursiva, que vai incluir todos os subdiretórios.
+* -4 or -6 pode ser usado se você quiser escolher a versão do protocolo empregada, sendo IPv4 ou IPv6. Você também pode configurar os requerimentos da configuração de IP mais exaustivamente com a palavra-chave da família de endereço.
+* -p vai preservar os tempos iniciais de modificação e atributos do arquivo. .
+* -u vai apagar a fonte do arquivo logo depois que a transferência for completada.
+* -c vai habilitar a compressão de dados enquanto a operação de transferência está sendo executada.
 
-Vamos falar sobre outras opções que você pode usar para modificar o comando SCP. Existem 20 comuns deles que você pode usar tanto na forma de caractere único (-o) quanto no equivalente descritivo (-option).
 
-As opções comuns mais usadas são:   
-
--P possibilita especificar uma entrada diferente para o servidor (a porta padrão para a porta TCP para o comando é a 22).
--c dá a possibilidade de especificar a encriptação do algoritmo que o cliente vai usar. Alguns dos valores que você pode usar são ‘aes256-ctr’, ‘aes256-cbc’, ‘blowfish-cbc’, ‘arcfour’, ‘arcfour128’, ‘arcfour256’, ‘cast128-cbc’, aes128-ctr’, ‘aes128-cbc’, ‘aes192-ctr’, ‘aes192-cbc’ e 3des-cbc’. A opção padrão na configuração do shell é ‘AnyStdCipher’
--q vai executar a operação em modo silencioso, o que significa que apenas os erros críticos é que serão mostrados.
--r é para cópia recursiva, que vai incluir todos os subdiretórios.
--4 or -6 pode ser usado se você quiser escolher a versão do protocolo empregada, sendo IPv4 ou IPv6. Você também pode configurar os requerimentos da configuração de IP mais exaustivamente com a palavra-chave da família de endereço.
-–p vai preservar os tempos iniciais de modificação e atributos do arquivo. .
-–u vai apagar a fonte do arquivo logo depois que a transferência for completada.
-–c vai habilitar a compressão de dados enquanto a operação de transferência está sendo executada.
 Detalhes para Ficar Atento
 Como o SCP usa encriptação SSH, você vai precisar de uma senha SSH para a transferência do arquivo acontecer.
 
