@@ -1,17 +1,20 @@
 Exemplo de Sintaxe de Comandos SCP Linux
+
 Um comando SCP básico:
 
     scp [other options] [source username@IP]:/[directory and file name] [destination username@IP]:/[destination directory]
 
-Pode parecer complicado num primeiro momento. Mas vamos explicar cada trecho dele para você.
-
-Neste exemplo de comando acima, estamos fazendo uma transferência entre dois servidores de VPS.
 
 [other options] são modificadores que você pode adicionar ao comando SCP. Vamos mostrar os mais populares dele mais abaixo.
+
 [source username@IP] é o nome do usuário e o IP da máquina que tem o arquivo que você quer. Seria algo como root@123.123.123.12.
+
 :/ informa o comando SCP que você está prestes a digitar no diretório fonte.
+
 [directory and file name] é onde o arquivo está localizado e o nome dele. Se parece com algo como /users/Edward/Desktop/SCP.png
+
 [destination username@IP] é o nome do usuário e do IP da máquina de destino.
+
 [destination directory] é o diretório onde o arquivo será salvo.
 Em um cenário mais claro, a situação se pareceria com algo como:
 
