@@ -1,6 +1,4 @@
-Exemplo de Sintaxe de Comandos SCP Linux
-
-Um comando SCP básico:
+<h1 align="center">Exemplo de Sintaxe de Comandos SCP Linux </h1>
 
     scp [other options] [source username@IP]:/[directory and file name] [destination username@IP]:/[destination directory]
 
