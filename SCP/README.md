@@ -28,20 +28,23 @@ As opções de flags comuns:
 
 <h3 align="center"> Arquivo Local para um Local Remoto </h3>
 
-Se você não tem uma confirmação automática do cliente SSH, você vai ser solicitado para inserir a senha da máquina local do usuário e versá uma métrica de progresso.
-
     scp /users/Edward/desktop/scp.zip root@191.162.0.2:/writing/article
 
-root@191.162.0.2’s password:
-novel3.zip   100% 0 0.0KB/s 00:00
-
-Mas, vamos dizer que a máquina remota está configurada para responder às conexões SSH e uma porta que não seja a 22.
+Uma porta que não seja a 22
     
     scp -P 2322 /users/Edward/desktop/scp.zip root@191.162.0.2:/writing/article
 
-Se você quiser mudar o nome do arquivo durante a operação da transferência.
+Copiar vários arquivos simultaneamente
+
+    scp arquivo1.txt arquivo2.exe arquivo3.txt arquivo4.pdf arquivo5.mp4 root@192.168.157.1:/home/usuario_remoto/downloads
+
+Mudar o nome do arquivo durante a operação da transferência.
     
     scp /users/Edward/desktop/scp.zip root@191.162.0.2:/writing/article/howtoscp.zip
+
+Silenciar os processos do SCP
+
+    scp -q ~/arquivo.iso root@192.168.156.1:/root/arquivos/arquivo.iso
 
 Se você quer copiar um diretório que tem mais arquivos e/ou mais subdiretórios, use a linha de comando -r.
     
