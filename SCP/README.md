@@ -28,7 +28,7 @@ As opções de flags comuns:
 * -u vai apagar a fonte do arquivo logo depois que a transferência for completada.
 * -c vai habilitar a compressão de dados enquanto a operação de transferência está sendo executada.
 
-<h1 align="center"> Arquivo Local para um Local Remoto </h1>
+<h2 align="center"> Arquivo Local para um Local Remoto </h2>
 
 Exemplo:
 
