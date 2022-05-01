@@ -53,7 +53,7 @@ Silenciar os processos do SCP
 
     scp -q ~/arquivo.iso root@192.168.156.1:/root/arquivos/arquivo.iso
 
-Se você quer copiar um diretório que tem mais arquivos e/ou mais subdiretórios, use a linha de comando -r.
+Copiar um diretório que tem mais arquivos e/ou mais subdiretórios, use a linha de comando -r.
     
     scp -r /users/Edward/desktop root@191.162.0.2:/writing/article
 
