@@ -60,47 +60,58 @@ Talvez você queira ver a seção de respostas em detalhes. Portanto, para ter i
 
     dig hostinger.com +noall +answer
 
-Especificando Nameservers
+<h4> Especificando Nameservers </h4>
+
 Por padrão, os comandos dig irão consultar os nomes de servidores listados em /etc/resolv.conf para pesquisar DNS para você. Você pode alterar esse comportamento padrão usando o símbolo @ seguido de um nome de host ou endereço IP do nome do servidor.
 
 O seguinte comando dig envia a consulta DNS para o nome do servidor do Google (8.8.8.8) usando a opção @8.8.8.8.
 
-dig @8.8.8.8 hostinger.com
-Consultar Todos os Tipos de Registro DNS
+    dig @8.8.8.8 hostinger.com
+
+<h4> Consultar Todos os Tipos de Registro DNS </h4>
+
 Para consultar todos os tipos de registro DNS disponíveis associados a um domínio, use a opção ANY. A opção ANY vai incluir todos os tipos de registro disponíveis na saída:
 
-dig hostinger.com ANY
-Pesquisar por Tipos de Registro
+    dig hostinger.com ANY
+
+<h4> Pesquisar por Tipos de Registro </h4>
+
 Se você quer pesquisar um registro específico, apenas adicione o tipo ao final do comando.
 
 Por exemplo, para consultar apenas a seção de resposta de troca de mensagens – MX – associada a um domínio, você pode usar o seguinte comando dig:
 
 Por exemplo, para consulta obter apenas a troca de mensagens MX – seção de resposta associada a um domínio, você pode usar o seguinte comando dig.
 
-dig hostinger.in MX
+    dig hostinger.in MX
+
 De forma similar, para visualizar os outros registros associados com o domínio, especifique os outros tipos de registro no final do comando dig:
 
-dig hostinger.com txt (Query TXT record)
+    dig hostinger.com txt (Query TXT record)
 
-dig hostinger.com cname (Query CNAME record)
+    dig hostinger.com cname (Query CNAME record)
 
-dig hostinger.com ns (Query NS record)
+    dig hostinger.com ns (Query NS record)
 
-dig hostinger.com A (Query A record)
-Rastrear Caminho DNS
+    dig hostinger.com A (Query A record)
+
+<h4> Rastrear Caminho DNS </h4>
+
 Dig permite rastrear o caminho de pesquisa de DNS usando a opção +trace. A opção faz consultas repetidas para resolver a pesquisa por nomes.
 
 Ele consultará os servidores de nomes a partir da raiz e, em seguida, percorrerá a namespaces tree usando consultas iterativas de referências ao longo do caminho:
 
-dig hostinger.com +trace
-Reverter DNS Lookup
+    dig hostinger.com +trace
+
+<h4> Reverter DNS Lookup </h4>
+
 A pesquisa reversa de DNS permite pesquisar o domínio e o nome do host associados a um endereço de IP.
 
 Para executar uma pesquisa reversa de DNS usando o comando dig, use a opção –x seguida do endereço de IP escolhido.
 
 No exemplo a seguir, a o dig realizará uma pesquisa de DNS inversa para o endereço IP associado ao google.com:
 
-dig +answer -x 172.217.166.46
+    dig +answer -x 172.217.166.46
+
 Lembre-se de que se um registro PTR não estiver definido para um endereço IP, não será possível fazer uma pesquisa reversa de DNS, pois o registro PTR aponta para o domínio ou nome do host.
 
 Consultas por Lotes
