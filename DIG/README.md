@@ -78,10 +78,13 @@ Para consultar todos os tipos de registro DNS disponíveis associados a um domí
 Se você quer pesquisar um registro específico, apenas adicione o tipo ao final do comando.
 
 * MX
+
         dig home.in MX
+
 * TXT
 
         dig home.lan TXT
+
 * CNAME
 
         dig home.lan CNAME
@@ -123,13 +126,9 @@ Para fazer isso, você precisa fornecer uma lista de nomes de domínio – um po
     vi domain_name.txt
 
 ```
-
 hostinger.com
-    
 google.com
-
 ubuntu.com
-
 ```
 
     dig -f domain_name.txt +short
