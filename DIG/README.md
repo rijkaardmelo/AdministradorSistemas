@@ -32,28 +32,34 @@ Isto é opcional e se você não fornecer um argumento de servidor, então o dig
 
 * [type] – o tipo de pesquisa solicitada pelo dig. Por exemplo, pode ser um registro A, registro MX, registro SOA ou qualquer outro tipo. Por padrão, o dig executa uma pesquisa por registro A se nenhum tipo de argumento for especificado.
 
-Como usar o comando DIG
+<h3> Como usar o comando DIG </h3>
+
 Vamos conhecer as utilidades básicas deste comando.
 
-Dig no Nome de Domínio
+<h4> Dig no Nome de Domínio</h4>
+
 Para executar uma pesquisa de DNS para um nome de domínio, apenas informe o nome com o comando dig:
 
-dig hostinger.com
+    dig hostinger.com
+
 Por padrão, o comando dig vai exibir o registro A quando não houver outras opções especificadas.
 
 A saída também terá outras informações como a versão dig instalada, detalhes técnicos sobre respostas, estatísticas sobre a pesquisa, seção de perguntas e outras mais.
 
-Respostas Curtas
+<h4> Respostas Curtas </h4>
 
 O comando dig acima inclui muitas informações úteis em seções diferentes, mas em alguns momentos você só deseja o resultado da consulta.
 
 Você pode fazer isso usando a opção +short, que vai exibir o endereço do IP (registro A) somente do nome do domínio:
 
-dig hostinger.com +short
-Respostas Detalhadas
+    dig hostinger.com +short
+
+<h4> Respostas Detalhadas</h4>
+
 Talvez você queira ver a seção de respostas em detalhes. Portanto, para ter informações detalhadas sobre a seção de respostas, você pode parar de exibir toda a seção usando a opção +noall e consultar a seção de respostas usando apenas a opção +answer com o comando dig.
 
-dig hostinger.com +noall +answer
+    dig hostinger.com +noall +answer
+
 Especificando Nameservers
 Por padrão, os comandos dig irão consultar os nomes de servidores listados em /etc/resolv.conf para pesquisar DNS para você. Você pode alterar esse comportamento padrão usando o símbolo @ seguido de um nome de host ou endereço IP do nome do servidor.
 
