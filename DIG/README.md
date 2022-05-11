@@ -77,20 +77,25 @@ Para consultar todos os tipos de registro DNS disponíveis associados a um domí
 
 Se você quer pesquisar um registro específico, apenas adicione o tipo ao final do comando.
 
-Por exemplo, para consultar apenas a seção de resposta de troca de mensagens – MX – associada a um domínio, você pode usar o seguinte comando dig:
-
-Por exemplo, para consulta obter apenas a troca de mensagens MX – seção de resposta associada a um domínio, você pode usar o seguinte comando dig.
+* MX
 
     dig home.in MX
 
-De forma similar, para visualizar os outros registros associados com o domínio, especifique os outros tipos de registro no final do comando dig:
+* TXT
 
-```
     dig home.lan TXT
+
+* CNAME
+
     dig home.lan CNAME
+
+* NS
+
     dig home.lan NS
+
+* A
+
     dig home.lan A
-```
 
 <h4> Rastrear Caminho DNS </h4>
 
