@@ -85,19 +85,12 @@ Por exemplo, para consulta obter apenas a troca de mensagens MX – seção de r
 
 De forma similar, para visualizar os outros registros associados com o domínio, especifique os outros tipos de registro no final do comando dig:
 
+```
     dig home.lan TXT
-
-
-
     dig home.lan CNAME
-
-
-
     dig home.lan NS
-
-
-
     dig home.lan A
+```
 
 <h4> Rastrear Caminho DNS </h4>
 
