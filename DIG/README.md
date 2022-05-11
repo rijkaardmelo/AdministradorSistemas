@@ -1,5 +1,4 @@
-
-<h1> Instalar Dig no Linux </h1>
+<h1 align="center"> Instalar Dig no Linux </h1>
 
 Dig é uma parte do pacote utilitário DNS que é frequentemente instalado com nomes de servidores BIND.
 
@@ -88,10 +87,16 @@ De forma similar, para visualizar os outros registros associados com o domínio,
 
     dig home.lan TXT
 
+
+
     dig home.lan CNAME
-    
+
+
+
     dig home.lan NS
-    
+
+
+
     dig home.lan A
 
 <h4> Rastrear Caminho DNS </h4>
