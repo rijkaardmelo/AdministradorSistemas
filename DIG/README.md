@@ -17,19 +17,21 @@ Ao instalar, verifique a versão para garantir que a configuração foi concluí
 
     dig -v
 
-Sintaxe Dig
+<h3>Sintaxe Dig</h3>
+
 De uma forma simples, a sintaxe do dig será como esta:
 
-dig [server] [name] [type]
-[server] – o endereço do IP ou hostname do servidor a ser consultado.
+    dig [server] [name] [type]
+
+* [server] – o endereço do IP ou hostname do servidor a ser consultado.
 
 Se o argumento do servidor for o hostname, então o dig resolverá o hostname antes de proceder com a consulta ao nome do servidor.
 
 Isto é opcional e se você não fornecer um argumento de servidor, então o dig usará o nome do servidor listado em /etc/resolv.conf.
 
-[name] – o nome do registro de recurso que deve ser pesquisado.
+* [name] – o nome do registro de recurso que deve ser pesquisado.
 
-[type] – o tipo de pesquisa solicitada pelo dig. Por exemplo, pode ser um registro A, registro MX, registro SOA ou qualquer outro tipo. Por padrão, o dig executa uma pesquisa por registro A se nenhum tipo de argumento for especificado.
+* [type] – o tipo de pesquisa solicitada pelo dig. Por exemplo, pode ser um registro A, registro MX, registro SOA ou qualquer outro tipo. Por padrão, o dig executa uma pesquisa por registro A se nenhum tipo de argumento for especificado.
 
 Como usar o comando DIG
 Vamos conhecer as utilidades básicas deste comando.
