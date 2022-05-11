@@ -25,9 +25,8 @@ De uma forma simples, a sintaxe do dig será como esta:
 
 * [server] – o endereço do IP ou hostname do servidor a ser consultado.
 
-Se o argumento do servidor for o hostname, então o dig resolverá o hostname antes de proceder com a consulta ao nome do servidor.
-
-Isto é opcional e se você não fornecer um argumento de servidor, então o dig usará o nome do servidor listado em /etc/resolv.conf.
+<p>Se o argumento do servidor for o hostname, então o dig resolverá o hostname antes de proceder com a consulta ao nome do servidor.</p>
+<p>Isto é opcional e se você não fornecer um argumento de servidor, então o dig usará o nome do servidor listado em /etc/resolv.conf.</p>
 
 * [name] – o nome do registro de recurso que deve ser pesquisado.
 
