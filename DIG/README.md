@@ -40,7 +40,7 @@ Vamos conhecer as utilidades básicas deste comando.
 
 Para executar uma pesquisa de DNS para um nome de domínio, apenas informe o nome com o comando dig:
 
-    dig hostinger.com
+    dig home.lan
 
 Por padrão, o comando dig vai exibir o registro A quando não houver outras opções especificadas.
 
@@ -52,13 +52,13 @@ O comando dig acima inclui muitas informações úteis em seções diferentes, m
 
 Você pode fazer isso usando a opção +short, que vai exibir o endereço do IP (registro A) somente do nome do domínio:
 
-    dig hostinger.com +short
+    dig home.lan +short
 
 <h4> Respostas Detalhadas</h4>
 
 Talvez você queira ver a seção de respostas em detalhes. Portanto, para ter informações detalhadas sobre a seção de respostas, você pode parar de exibir toda a seção usando a opção +noall e consultar a seção de respostas usando apenas a opção +answer com o comando dig.
 
-    dig hostinger.com +noall +answer
+    dig home.lan +noall +answer
 
 <h4> Especificando Nameservers </h4>
 
@@ -66,13 +66,13 @@ Por padrão, os comandos dig irão consultar os nomes de servidores listados em 
 
 O seguinte comando dig envia a consulta DNS para o nome do servidor do Google (8.8.8.8) usando a opção @8.8.8.8.
 
-    dig @8.8.8.8 hostinger.com
+    dig @8.8.8.8 home.lan
 
 <h4> Consultar Todos os Tipos de Registro DNS </h4>
 
 Para consultar todos os tipos de registro DNS disponíveis associados a um domínio, use a opção ANY. A opção ANY vai incluir todos os tipos de registro disponíveis na saída:
 
-    dig hostinger.com ANY
+    dig home.lan ANY
 
 <h4> Pesquisar por Tipos de Registro </h4>
 
@@ -82,20 +82,17 @@ Por exemplo, para consultar apenas a seção de resposta de troca de mensagens �
 
 Por exemplo, para consulta obter apenas a troca de mensagens MX – seção de resposta associada a um domínio, você pode usar o seguinte comando dig.
 
-    dig hostinger.in MX
+    dig home.in MX
 
 De forma similar, para visualizar os outros registros associados com o domínio, especifique os outros tipos de registro no final do comando dig:
 
-    dig hostinger.com TXT
+    dig home.lan TXT
 
+    dig home.lan CNAME
     
-    dig hostinger.com CNAME
-
+    dig home.lan NS
     
-    dig hostinger.com NS
-
-    
-    dig hostinger.com A
+    dig home.lan A
 
 <h4> Rastrear Caminho DNS </h4>
 
@@ -103,7 +100,7 @@ Dig permite rastrear o caminho de pesquisa de DNS usando a opção +trace. A op�
 
 Ele consultará os servidores de nomes a partir da raiz e, em seguida, percorrerá a namespaces tree usando consultas iterativas de referências ao longo do caminho:
 
-    dig hostinger.com +trace
+    dig home.lan +trace
 
 <h4> Reverter DNS Lookup </h4>
 
