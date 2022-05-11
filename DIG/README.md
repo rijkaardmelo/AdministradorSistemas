@@ -125,13 +125,15 @@ Para fazer isso, você precisa fornecer uma lista de nomes de domínio – um po
 
     vi domain_name.txt
 '''
+
 hostinger.com
     
 google.com
 
 ubuntu.com
+
 '''
-    
+
     dig -f domain_name.txt +short
 
 <h4> Controlar Comportamento Dig </h4>
