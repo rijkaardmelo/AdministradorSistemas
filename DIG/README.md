@@ -124,7 +124,8 @@ Com o utilitário dig, você pode realizar uma pesquisa de DNS para uma lista de
 Para fazer isso, você precisa fornecer uma lista de nomes de domínio – um por linha em um arquivo. Quando o arquivo estiver pronto, especifique o nome dele com a opção -f:
 
     vi domain_name.txt
-'''
+
+```
 
 hostinger.com
     
@@ -132,7 +133,7 @@ google.com
 
 ubuntu.com
 
-'''
+```
 
     dig -f domain_name.txt +short
 
