@@ -86,13 +86,16 @@ Por exemplo, para consulta obter apenas a troca de mensagens MX – seção de r
 
 De forma similar, para visualizar os outros registros associados com o domínio, especifique os outros tipos de registro no final do comando dig:
 
-    dig hostinger.com txt (Query TXT record)
+    dig hostinger.com TXT
 
-    dig hostinger.com cname (Query CNAME record)
+    
+    dig hostinger.com CNAME
 
-    dig hostinger.com ns (Query NS record)
+    
+    dig hostinger.com NS
 
-    dig hostinger.com A (Query A record)
+    
+    dig hostinger.com A
 
 <h4> Rastrear Caminho DNS </h4>
 
@@ -114,23 +117,28 @@ No exemplo a seguir, a o dig realizará uma pesquisa de DNS inversa para o ender
 
 Lembre-se de que se um registro PTR não estiver definido para um endereço IP, não será possível fazer uma pesquisa reversa de DNS, pois o registro PTR aponta para o domínio ou nome do host.
 
-Consultas por Lotes
+<h4> Consultas por Lotes </h4>
+
 Com o utilitário dig, você pode realizar uma pesquisa de DNS para uma lista de domínios em vez de fazer o mesmo para cada um individualmente.
 
 Para fazer isso, você precisa fornecer uma lista de nomes de domínio – um por linha em um arquivo. Quando o arquivo estiver pronto, especifique o nome dele com a opção -f:
 
-vi domain_name.txt
+    vi domain_name.txt
 
 hostinger.com
-
+    
 google.com
 
 ubuntu.com
-dig -f domain_name.txt +short
-Controlar Comportamento Dig
+    
+    dig -f domain_name.txt +short
+
+<h4> Controlar Comportamento Dig </h4>
+
 A saída do comando pode ser personalizada permanentemente configurando opções no arquivo ~/.digrc que serão executadas automaticamente com o comando.
 
 Suponha que você queira visualizar apenas a seção de respostas – especifique as opções necessárias no arquivo ~/.digrc, para que você não precise digitá-las durante a execução da consulta.
 
-echo "+noall +answer" > ~/.digrc
+    echo "+noall +answer" > ~/.digrc
+
 Agora, faça uma pesquisa no servidor DNS para um domínio. A saída confirma que o dig é executada com as opções definidas no arquivo ~/.digrc.
