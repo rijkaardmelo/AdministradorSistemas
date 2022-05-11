@@ -91,11 +91,11 @@ Se você quer pesquisar um registro específico, apenas adicione o tipo ao final
 
 * NS
 
-    dig home.lan NS
+        dig home.lan NS
 
 * A
 
-    dig home.lan A
+        dig home.lan A
 
 <h4> Rastrear Caminho DNS </h4>
 
